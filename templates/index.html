@@ -11,8 +11,8 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
 
   <!-- CSS -->
-  <!-- <link rel="stylesheet" type="text/css" href="static/css/style.css"> -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css"> -->
 
   <!-- other stuff -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,13 +20,19 @@
 
 </head>
 
-<body onload="disableSubmit()">
-  Zipcode:<br>
-  <input type="text" name="zipcode" value="01234"><br>
-  <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  I Agree Terms & Conditions
-  <br><br>
-  <input type="submit" name="submit" id="submit">
+<!-- <body onload="disableSubmit()" -->
+<body>
+  <form></form>
 
+  <!-- <form onsubmit="ShowInfo()">
+    <h1>See what the local weather is like: </h1>
+    Zipcode:
+    <input type="text" name="zipcode" id="zipcode" value="01234"><br><br>
+    <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  I Agree To <a href="#">Terms & Conditions</a><br><br>
+    <input type="submit" name="submit" id="submit">
+  </form> -->
+
+  <div id="userinfo"></div>
 
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
