@@ -46,9 +46,11 @@ function GetSignups(){
 function ShowInfo(){
     var form = d3.select("form").html("");
 
-    d3.json(queryUrl).then((data) => {
-        console.log("in d3.json");
-        GetInformation(data);
+    d3.json(`/submit`).then(function(){
+        d3.json(queryUrl).then((data) => {
+            console.log("in d3.json");
+            GetInformation(data);
+        });
     });
 }
 

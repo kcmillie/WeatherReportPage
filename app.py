@@ -8,7 +8,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 # import json
@@ -26,21 +26,13 @@ zipcodesdb = Base.classes.ZIPCODES
 
 @app.route("/")
 def index():
-    """Return the homepage."""
     return render_template("index.html")
 
 
-# @app.route("/zip", methods=['POST', 'GET'])
-# def zip():
-#     if request.method == "GET":
-#         return
-#     else:
-
-#         newzip = zipcodesdb(ZIPCODE=zipvalue, SIGNUP_DATE=signupdate)
-
-#         db.session.add(newzip)
-#         db.session.commit()
-#     return("")
+@app.route("/submit")
+def submit():
+    print("Someone Signed Up!")
+    return jsonify({"success": True})
 
 
 if __name__ == "__main__":
