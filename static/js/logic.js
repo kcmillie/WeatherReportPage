@@ -19,7 +19,8 @@ function GetSignups(){
     form.append("input")
         .attr("id", "inputform")
         .attr('type','text')
-        .attr('name','zipcode');
+        .attr('name','zipcode')
+        .attr('required',"required");
 
     form.append("br");
 
@@ -39,16 +40,15 @@ function GetSignups(){
 
     form.append("input")
         .attr('type',"submit")
-        .attr('name','submit')
-        .attr('id', 'submit');
+        .attr('id','submit')
+        .attr('value','Sign Up!');
 }
 
 function ShowInfo(){
     var form = d3.select("form").html("");
 
-    d3.json(`/submit`).then(function(){
+    d3.json(`/click`).then(function(){
         d3.json(queryUrl).then((data) => {
-            console.log("in d3.json");
             GetInformation(data);
         });
     });

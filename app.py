@@ -29,8 +29,8 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/submit")
-def submit():
+@app.route("/click")
+def click():
     print("Someone Signed Up!")
     return jsonify({"success": True})
 
