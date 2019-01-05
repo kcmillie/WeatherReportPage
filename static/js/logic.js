@@ -6,7 +6,7 @@ function GetSignups(){
 
     var form = d3.select("form")
         .attr('id', 'myForm')
-        .attr('onsubmit',"return ShowInfo();");
+        .on('submit',ShowInfo);
 
     form.append("h1").text("See your local weather!");
 
@@ -45,6 +45,7 @@ function GetSignups(){
 }
 
 function ShowInfo(){
+    d3.event.preventDefault()
     var form = d3.select("form").html("");
 
     d3.json(`/click`).then(function(){
@@ -56,6 +57,7 @@ function ShowInfo(){
 
 // Retrieve weather information
 function GetInformation(data){
+    console.log('getting information for temp')
     //City and State
     var city = data.today.city;
     var state = data.today.state;
