@@ -1,3 +1,16 @@
-#id{
-    color: red;
+.userinfo{
+    max-width: 320px;
+}
+
+#provandterms {
+    font-size: 15px;
+}
+
+#curr_temp, #curr_desc{
+    height: 51px;
+    padding-top: 13px;
+}
+
+#curr_temp{
+    font-size: 24px;
 }
